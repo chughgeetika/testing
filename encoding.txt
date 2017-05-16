@@ -47,4 +47,51 @@ else if (s[i]<65)
     printf("%s",s);
 return 0;
 }
- 
+
+geetika chugh <chughgeetika411@gmail.com>
+24 अप्रैल
+
+jagandeep 
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+int n,i,c;
+char s[300];
+printf("this is  a number to be add:");
+scanf("%d",&n);
+printf("this is a name to be code:");
+scanf("%s",s);
+
+for (i=0;i<strlen(s);i++)
+{
+     if (n>=0)
+     {
+       c=n%26;
+       s[i]=s[i]+c;
+     }
+     else if(n>= +26)
+     {
+         c=n%26;
+
+        s[i]=s[i]+c;
+     }
+     if (n<0 && n>-26)
+     {
+
+       c=n%26;
+       c=c+26;
+
+       s[i]=s[i]+c;
+     }
+     else if(n<-26)
+     {
+         c=n%26;
+         c=c+26;
+        s[i]=s[i]+c;
+
+     } }
+printf("encoded:");
+printf("%s",s);
+return 0;
+}
