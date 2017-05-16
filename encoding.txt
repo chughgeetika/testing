@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+int n,i;
+char s[300];
+printf("this is  a number to be add:");
+scanf("%d",&n);
+
+printf("this is a name to be code:");
+scanf("%s",s);
+
+do
+{
+for (i=0;i<strlen(s);i++)
+ {
+ s[i]=s[i]+n;
+ if (s[i]>122)
+{
+  s[i]=s[i]-26;
+}
+else if (s[i]<97)
+{
+ s[i]=s[i]+26;
+}
+}}while (s[i]>=97 && s[i]<=122);
+
+/*do
+{
+for (i=0;i<strlen(s);i++)
+ {
+ s[i]=s[i]+n;
+ if (s[i]>90)
+{
+  s[i]=s[i]-26;
+}
+else if (s[i]<65)
+{
+ s[i]=s[i]+26;
+}
+}}while (s[i]>=65 && s[i]<=90);*/
+
+
+
+
+  printf("encoded:");
+    printf("%s",s);
+return 0;
+}
+ 
